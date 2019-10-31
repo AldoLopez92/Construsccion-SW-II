@@ -1,0 +1,45 @@
+<!-- Toolbar -->
+<div style="width: 100%">
+  <mat-progress-bar color="accent" mode="indeterminate" [style.display]="mostrarProgressBar ? 'inherit' : 'none'"></mat-progress-bar>
+  <!-- <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner> -->
+</div>
+
+
+  <mat-toolbar>
+    Net.UPT.edu.pe
+  </mat-toolbar>
+<mat-card class="content" role="main">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Universidad Privada de Tacna</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="example-form">
+        <div class="centrar">
+          <table class="example-full-width" cellspacing="0">
+            <tr>
+              <td>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Código" [(ngModel)]="username" name="username" required value="2">
+                </mat-form-field>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Contraseña" [(ngModel)]="password" type="password" name="password"
+                    required>
+                </mat-form-field>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </form>      
+    </mat-card-content>
+    <div class="centrar">
+      <mat-card-actions>
+        <button mat-raised-button (click)="login()" color="primary">Login</button>
+      </mat-card-actions>
+    </div>
+  </mat-card>
+</mat-card>
